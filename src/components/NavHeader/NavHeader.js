@@ -7,11 +7,11 @@ import './NavHeader.css'
 class NavHeader extends Component{
   render() {
     return (
-      <div className="hwrapper">
-        <div>
+      <div className="header_wrapper">
+        <div className="header_sub-wrapper">
           <img src={headLogo} alt=""/>
           <h1>Houser Dashboard</h1>
-          <button>Logout</button>
+          <button className="header_button">Logout</button>
 
         </div>
       </div>

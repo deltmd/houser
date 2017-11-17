@@ -1,8 +1,20 @@
-.hwrapper {
-  width: 100%;
+.header_wrapper {
+  width: 200%;
+  margin-left: -50%;
   height: 5vh;
   background: #519872;
   color: white;
   display: flex;
-
+}
+.header_button{
+  background: #519872;
+  color: white;
+  border: none;
+  outline: none;  
+}
+.header_sub-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
 }
