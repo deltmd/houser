@@ -28,7 +28,7 @@ app.use( session({
 app.use( checkForSession );
 
 app.post('/api/auth/login', auth_controller.login);
-app.post('/api/auth/register', auth_controller.login);
+app.post('/api/auth/register', auth_controller.register);
 app.post( '/api/auth/logout', auth_controller.logOut);
 
 const port = process.env.PORT || 3001;
