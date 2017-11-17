@@ -22,11 +22,16 @@ class LogIn extends Component {
       this.props.updateTest(res.data[0].username)
     })
   }
-  logIn(name, pass) {
-    console.log(name, pass);
+  logIn(username, password) {
+    console.log(username, password);
+    let promise = axios.post('/api/auth/login',{username, password})
+    .then(res=>{
+      console.log(res);
+    })
   } 
-  regester(name, pass) {
-    console.log(name, pass);
+  regester(username, password) {
+    console.log(username, password);
+    let promise = axios.post('/api/auth/register', { username, password })
   }
   render() {
     console.log(this.refs.login_password);
