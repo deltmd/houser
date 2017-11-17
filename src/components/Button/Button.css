@@ -1,0 +1,30 @@
+.button_light{
+  min-width: 7vw;
+  padding: 5px 20px 5px 20px;
+  background: #8AEA92;
+  color: #3B5249;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  border-radius: 2px;
+}
+.button_dark{
+  min-width: 7vw;
+  padding: 5px 20px 5px 20px;
+  background: #3B5249;
+  color: white;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  border-radius: 2px;
+}
+.button_red{
+  min-width: 7vw;
+  padding: 5px 20px 5px 20px;
+  background: #FEC2C2;
+  color: #3B5249;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  border-radius: 2px;
+}
