@@ -3,13 +3,14 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const cors = require('cors');
 const massive = require('massive');
+
+const checkForSession = require('./middleware/checkForSession');
+
 require('dotenv').config();
 
-<<<<<<< HEAD
 const tests_controller = require('./controllers/testCtrl');
-=======
-const tests_controller = require('./controllers/testCtrl.js')
->>>>>>> 788d5a119d747981844e95ca2fa43a799dc6f073
+
+const auth_controller = require('./controllers/auth_controller');
 
 const app = express();
 
@@ -24,7 +25,10 @@ app.use( session({
     secret: process.env.SESSION_SECRET
 }))
 
-app.get('/api/tests', tests_controller.readAll);
+app.use( checkForSession );
+
+app.post('/api/auth/login', auth_controller.login);
+app.post('/api/auth/register', auth_controller.login);
 
 const port = process.env.PORT || 3001;
 app.listen( port, () => { console.log(`Server listening on port ${ port }.`); } );
