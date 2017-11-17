@@ -13,9 +13,9 @@ class Test extends Component {
     }
   }
   getTestEndpoint(){
-    let promise = axios.get('/api/tests')
+    let promise = axios.get('http://localhost:3001/api/tests')
     promise.then(res=>{
-      this.props.updateTest(res.data)
+      this.props.updateTest(res.data[0].username)
     })
   }
   render() {
