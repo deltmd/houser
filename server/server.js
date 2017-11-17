@@ -5,6 +5,8 @@ const cors = require('cors');
 const massive = require('massive');
 require('dotenv').config();
 
+const tests_controller = require('./controllers/testCtrl');
+
 const app = express();
 
 app.use( bodyParser.json() );
