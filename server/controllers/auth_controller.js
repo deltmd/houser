@@ -26,10 +26,20 @@ module.exports= {
         const { username, password } = req.body;
         
         dbInstance.create_user([ username, password ])
-        .then( res.status(200).send( req.session.user ) );
+        .then( user => {
+            session.user.username = username;
+            session.user.id = user.ID;
+            res.status(200).send( session.user ) 
+        });
         
-        
+    },
 
+    logOut: ( req, res, next ) => {
+        const dbInstance = req.app.get('db');
+        const { session } = req;
+
+        session.destroy();
+        res.status(200).send('This session has ended');
 
     }
 
