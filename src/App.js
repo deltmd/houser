@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className='all_outerWrapper'>
         <div className='all_innerWrapper'>
-          <NavHeader/>
+          {window.location.href[window.location.href.length-2] !=='#' && <NavHeader/>}
           {router}
         </div>
       </div>
