@@ -5,7 +5,11 @@ const cors = require('cors');
 const massive = require('massive');
 require('dotenv').config();
 
+<<<<<<< HEAD
 const tests_controller = require('./controllers/testCtrl');
+=======
+const tests_controller = require('./controllers/testCtrl.js')
+>>>>>>> 788d5a119d747981844e95ca2fa43a799dc6f073
 
 const app = express();
 
